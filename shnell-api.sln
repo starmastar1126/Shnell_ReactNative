@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29409.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "shnell-api", "shnell-api.phpproj", "{57E54F3C-0547-4CEA-AB9D-29B89CC175DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57E54F3C-0547-4CEA-AB9D-29B89CC175DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57E54F3C-0547-4CEA-AB9D-29B89CC175DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {714A86B9-964D-4BAF-96FC-64727D1C7BCF}
+	EndGlobalSection
+EndGlobal

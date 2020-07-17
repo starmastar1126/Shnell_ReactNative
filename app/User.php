@@ -2,14 +2,13 @@
 
 namespace App;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Tymon\JWTAuth\Contracts\JWTSubject;
 
-class User extends Authenticatable
+class User extends Authenticatable implements JWTSubject
 {
     use Notifiable;
-	use Notifiable;
     protected $table ='users';
     public $primaryKey='userid';
     public $timestamps=true;
@@ -29,8 +28,36 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password',
+        'password', 'remember_token',
     ];
 
-  
+    public function getJWTIdentifier()
+    {
+        return $this->getKey();
+    }
+    public function getJWTCustomClaims()
+    {
+        return [];
+    }
+
+    public function getUserName()
+    {
+        return $this->firstname . " " . $this->lastname;
+    }
+
+    public function getUserRole()
+    {
+        return $this->role;
+    }
+
+    public function getId()
+    {
+        return $this->userid;
+    }
+
+    public function getFactory()
+    {
+        return $this->factoryName;
+    }
+
 }
